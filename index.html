@@ -12,85 +12,101 @@
 
 
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
 
-            $(".smooth").click(function() {
+            $(".smooth").click(function () {
 
 
             });
 
 
         });
-        
-    
+
+
     </script>
 
-    
+
 
 </head>
 
 
 <body>
-  
-    <div id="nav">
+
+    <header>
         <ul>
             <li><a href="#home">Home</a></li>
             <li class="dropdown">
-    <a href="javascript:void(0)" class="dropbtn">About Me</a>
-    <div class="dropdown-content">
-      <a href="#">Interests</a>
-      <a href="#">Education</a>
-      <a href="#">Philosophy</a>
-    </div>
+                <a href="#about" class="dropbtn">About Me</a>
+                <div class="dropdown-content">
+                    <a href="#section01">Interests</a>
+                    <a href="#section02">Education</a>
+                    <a href="#section03">Philosophy</a>
+                </div>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+    </header>
+
+    <div class="column">
+        <img src="./images/portrait_small.jpg" alt="Avatar" class="avatar">
     </div>
-
-
-    <div class="column"><img src="./images/m1.png" alt="Avatar" class="avatar">
-    <h5>Milim Lee</h5>
+    <div class="column1">
+        <h1>Milim Lee</h1>
+        <p>I'm a student in computer programming course at Sheridan college.</p>
+        <p>To become a geek in programming, I am working on and on...<br>
+            <a href="/about.html">Read more about my life...</a></p>
     </div>
+       
+        <section id="about"> 
+             <div><h3>About Me </h3><div></div>
+            <table>
+                <tr>
+                    <th id="interests">
+                        Interests</th>
+                    <th id="education">Education</th>
+                    <th id="philosophy">Philosophy</th>
+                </tr>
+                <tr>
+                    <td id="section01">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi nostrum ullam
+                        perferendis magnam laudantium id neque adipisci tempora officia provident repellat dicta, eos
+                        illo placeat quaerat nulla dolor assumenda libero?</td>
+                    <td class="section02">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam facilis
+                        nostrum, sunt, exercitationem laboriosam tempore quasi aliquam quia in ipsam consectetur.
+                        Tempore aliquam culpa natus, dignissimos libero nulla labore sint.</td>
+                    <td class="section03">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias suscipit dolorem
+                        distinctio! Autem beatae sapiente quidem consectetur eos magnam, optio sequi culpa, a sit nam
+                        cupiditate aliquam explicabo placeat cum.</td>
+                </tr>
+                </table>
+        </section>
 
-    <!-- the first row for displying image and self introduction-->
+        <section id="experience">
+            <h3>Experience </h3>
+            <div class="sub">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus ipsam necessitatibus nam voluptatem
+                vitae accusamus vero nesciunt quis ullam? Rem.
+            </div>
 
-    <div class="row">
-        <div class="aboutHead" id="about" > <h3>About Me </h3> </div>
-<div>
-    
-<table id="Pictures">
-<tr><th class="cell" id="interests">Interests</th>
-<th class="cell" id="education">Education</th>
-<th class="cell" id="philosophy">Philosophy</th></tr>
-<tr>
-<td class="cell">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi nostrum ullam perferendis magnam laudantium id neque adipisci tempora officia provident repellat dicta, eos illo placeat quaerat nulla dolor assumenda libero?</td>
-<td class="cell">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam facilis nostrum, sunt, exercitationem laboriosam tempore quasi aliquam quia in ipsam consectetur. Tempore aliquam culpa natus, dignissimos libero nulla labore sint.</td>
-<td class="cell">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias suscipit dolorem distinctio! Autem beatae sapiente quidem consectetur eos magnam, optio sequi culpa, a sit nam cupiditate aliquam explicabo placeat cum.</td>
-</tr>
-</table>   
-</div>     
-</div>
+        </section>
 
+        <section id="contact">
+                <h3>Contact </h3>
+            <div class="sub">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus ipsam necessitatibus nam voluptatem
+                vitae accusamus vero nesciunt quis ullam? Rem.
+            </div>
 
-<div class="column2" onclick="openTab('b2');" style="background-color:lightpink;">
-    Interests
-</div>
-<div id="b2" class="containerTab" style="background-color:lightpink;">
-<!-- If you want the ability to closethe container, add a close button -->
-<span onclick="this.parentElement.style.display='none'" class="closebtn">X</span>
-<h3>Interest </h3>
-<p>I'm a student in computer programming course at Sheridan college.</p>
-    <p>To become a geek in programming, I am working on and on...<br>
-        <a href="/about.html">Read more about my life...</a></p>
-</div>
-
-
+        </section>
+  
+    <footer>
+    <p>CopyRight</p>
+    </footer>
 
 
     <script type="text/javascript" src="js/column.js"></script>
     <!-- <script type="text/javascript" src="js/anime.js"></script>
     <script type="text/javascript" src="js/anime.min.js"></script> -->
-    
+
 </body>
 
 </html>
