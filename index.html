@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>jQuery Assignment 1 - webpage </title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- Load icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+    <script>
+        $(document).ready(function() {
+
+            $(".smooth").click(function() {
+
+
+            });
+
+
+        });
+        
+    
+    </script>
+
+    
+
+</head>
+
+
+<body>
+  
+    <div id="nav">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">About Me</a>
+    <div class="dropdown-content">
+      <a href="#">Interests</a>
+      <a href="#">Education</a>
+      <a href="#">Philosophy</a>
+    </div>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+
+    <div class="column"><img src="./images/m1.png" alt="Avatar" class="avatar">
+    <h5>Milim Lee</h5>
+    </div>
+
+    <!-- the first row for displying image and self introduction-->
+
+    <div class="row">
+        <div class="aboutHead" id="about" > <h3>About Me </h3> </div>
+<div>
+    
+<table id="Pictures">
+<tr><th class="cell" id="interests">Interests</th>
+<th class="cell" id="education">Education</th>
+<th class="cell" id="philosophy">Philosophy</th></tr>
+<tr>
+<td class="cell">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi nostrum ullam perferendis magnam laudantium id neque adipisci tempora officia provident repellat dicta, eos illo placeat quaerat nulla dolor assumenda libero?</td>
+<td class="cell">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam facilis nostrum, sunt, exercitationem laboriosam tempore quasi aliquam quia in ipsam consectetur. Tempore aliquam culpa natus, dignissimos libero nulla labore sint.</td>
+<td class="cell">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias suscipit dolorem distinctio! Autem beatae sapiente quidem consectetur eos magnam, optio sequi culpa, a sit nam cupiditate aliquam explicabo placeat cum.</td>
+</tr>
+</table>   
+</div>     
+</div>
+
+
+<div class="column2" onclick="openTab('b2');" style="background-color:lightpink;">
+    Interests
+</div>
+<div id="b2" class="containerTab" style="background-color:lightpink;">
+<!-- If you want the ability to closethe container, add a close button -->
+<span onclick="this.parentElement.style.display='none'" class="closebtn">X</span>
+<h3>Interest </h3>
+<p>I'm a student in computer programming course at Sheridan college.</p>
+    <p>To become a geek in programming, I am working on and on...<br>
+        <a href="/about.html">Read more about my life...</a></p>
+</div>
+
+
+
+
+    <script type="text/javascript" src="js/column.js"></script>
+    <!-- <script type="text/javascript" src="js/anime.js"></script>
+    <script type="text/javascript" src="js/anime.min.js"></script> -->
+    
+</body>
+
+</html>
