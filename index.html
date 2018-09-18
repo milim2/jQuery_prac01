@@ -14,11 +14,13 @@
     <script>
         $(document).ready(function () {
 
-            $(".smooth").click(function () {
+            $(".visible").hide();
+
+            $("#display_about").click(function() {
+                $(".visible").slideDown();
 
 
             });
-
 
         });
 
@@ -54,35 +56,32 @@
         <h1>Milim Lee</h1>
         <p>I'm a student in computer programming course at Sheridan college.</p>
         <p>To become a geek in programming, I am working on and on...<br>
-            <a href="/about.html">Read more about my life...</a></p>
+            <a href="#about">Read more about my life...</a></p>
     </div>
        
         <section id="about"> 
-             <div><h3>About Me </h3><div></div>
-            <table>
-                <tr>
-                    <th id="interests">
-                        Interests</th>
-                    <th id="education">Education</th>
-                    <th id="philosophy">Philosophy</th>
-                </tr>
-                <tr>
-                    <td id="section01">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi nostrum ullam
+             <div><h3 id="display_about">About Me </h3></div>
+            <div class="visible">
+                <ul>
+                    <li id="section01">Education
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi nostrum ullam
                         perferendis magnam laudantium id neque adipisci tempora officia provident repellat dicta, eos
-                        illo placeat quaerat nulla dolor assumenda libero?</td>
-                    <td class="section02">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam facilis
+                        illo placeat quaerat nulla dolor assumenda libero?</p></li>
+                    <li id="section02">Interests
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam facilis
                         nostrum, sunt, exercitationem laboriosam tempore quasi aliquam quia in ipsam consectetur.
-                        Tempore aliquam culpa natus, dignissimos libero nulla labore sint.</td>
-                    <td class="section03">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias suscipit dolorem
+                        Tempore aliquam culpa natus, dignissimos libero nulla labore sint.</p></li>
+                    <li id="section03">Philosophy
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias suscipit dolorem
                         distinctio! Autem beatae sapiente quidem consectetur eos magnam, optio sequi culpa, a sit nam
-                        cupiditate aliquam explicabo placeat cum.</td>
-                </tr>
-                </table>
+                        cupiditate aliquam explicabo placeat cum.</p></li>
+                </ul>
+               
         </section>
 
         <section id="experience">
             <h3>Experience </h3>
-            <div class="sub">
+            <div class="visible">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus ipsam necessitatibus nam voluptatem
                 vitae accusamus vero nesciunt quis ullam? Rem.
             </div>
@@ -91,7 +90,7 @@
 
         <section id="contact">
                 <h3>Contact </h3>
-            <div class="sub">
+            <div class="visible">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus ipsam necessitatibus nam voluptatem
                 vitae accusamus vero nesciunt quis ullam? Rem.
             </div>

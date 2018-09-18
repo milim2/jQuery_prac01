@@ -87,9 +87,7 @@ li.dropdown {
 
 .dropdown-content a:hover {background-color: #f1f1f1}
 
-.dropdown:hover .dropdown-content {
-    display: block;
-}
+.dropdown:hover .dropdown-content {display: block;}
 
 
 .picture {
@@ -97,3 +95,12 @@ li.dropdown {
     height:200px;
 }
 
+.visible {
+    
+    padding: 2px;
+    font-size: 1.5em;
+
+}
+#section01, #section02, #section03 {
+    background-color: white;
+}
