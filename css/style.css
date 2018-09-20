@@ -28,16 +28,27 @@ body {
     float: right;
     width: 55%;
     margin-top: 30px;
+    display: block
 }
 
+section {
+    display: list-item;
+}
 
-section, footer {
+#about {
+    float: left;
+}
+
+#
+
+footer {
     float: left;
     padding: 15px;
     text-align: center;
     font-size: 15px;
     cursor: pointer;
     margin: 10px;
+    display: block;
 }
 
 ul {
@@ -103,4 +114,9 @@ li.dropdown {
 }
 #section01, #section02, #section03 {
     background-color: white;
+    display: block;
+}
+
+table tr td {
+    
 }
