@@ -14,13 +14,21 @@
     <script>
         $(document).ready(function () {
 
-            $(".visible").hide();
+            $("#visible").hide();           
+            $("#exp_visible").hide();
+            $("#con_visible").hide();
 
-            $("#display_about").click(function() {
-                $(".visible").slideDown();
 
-
+            $("#about").click(function() {
+                $("#visible").slideDown();
             });
+            
+            $("#exp").click(function() {
+                $("#visible").hide();
+                $("#exp_visible").slideDown();
+                
+            });
+
 
         });
 
@@ -56,21 +64,19 @@
         <h1>Milim Lee</h1>
         <p>I'm a student in computer programming course at Sheridan college.</p>
         <p>To become a geek in programming, I am working on and on...<br>
-            <a href="#about">Read more about my life...</a></p>
+           
     </div>
        
 
         <div> 
-            <table>
-	    <tr><td class="cell" id="CNTower">About</td>
-		<td class="cell" id="NPSquare">Experience</td>
-		<td class="cell" id="Niagara">Contact</td></tr>
+        <table>
+	    <tr><td id="about">About</td>
+		<td id="exp">Experience</td>
+		<td id="cont">Contact</td></tr>
 </table>
 </div>
 
-<section id="about"></section>
-             
-            <div class="visible">
+<section id="visible">           
                 <ul>
                     <li id="section01">Education
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi nostrum ullam
@@ -84,23 +90,21 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias suscipit dolorem
                         distinctio! Autem beatae sapiente quidem consectetur eos magnam, optio sequi culpa, a sit nam
                         cupiditate aliquam explicabo placeat cum.</p></li>
-                </ul>
-               
+                                        </ul>               
         </section>
 
         <section id="experience">
-               <div class="visible">
+               <div id="exp_visible">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus ipsam necessitatibus nam voluptatem
                 vitae accusamus vero nesciunt quis ullam? Rem.
-            </div>
+                </div>
         </section>
 
         <section id="contact">              
-            <div class="visible">
+            <div id="con_visible">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus ipsam necessitatibus nam voluptatem
                 vitae accusamus vero nesciunt quis ullam? Rem.
             </div>
-
         </section>
   
     <footer>

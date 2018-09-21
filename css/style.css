@@ -35,11 +35,6 @@ section {
     display: list-item;
 }
 
-#about {
-    float: left;
-}
-
-#
 
 footer {
     float: left;
@@ -117,6 +112,21 @@ li.dropdown {
     display: block;
 }
 
-table tr td {
-    
+
+table {
+    width: 100%;
+    border-collapse: collapse;
 }
+
+td {
+    padding: 3px;
+    background-color: lightgrey;
+    width:33.33%;
+    height: 20px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.5em;
+    color: #000;
+
+}
+    
