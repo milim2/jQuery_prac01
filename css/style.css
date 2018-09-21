@@ -3,6 +3,7 @@
 body { 
     margin: 60px auto; 
     width: 70%; 
+    height: 100vh;
 }
 
 .avatar {
@@ -11,7 +12,7 @@ body {
     border-radius: 50%;
     margin-bottom: 100px;
     padding: 2px;
-    border: 3px solid #063;
+    border: 3px solid lightgrey;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -29,10 +30,6 @@ body {
     width: 55%;
     margin-top: 30px;
     display: block
-}
-
-section {
-    display: list-item;
 }
 
 
@@ -96,29 +93,30 @@ li.dropdown {
 .dropdown:hover .dropdown-content {display: block;}
 
 
-.picture {
-    width:100%; 
-    height:200px;
-}
 
-.visible {
-    
-    padding: 2px;
+.subhead {    
+    float: left;
+    padding: 5px 5px;
+    background-color: lightgrey;
+    width:100%;
+    height: 40px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1.5em;
-
+    color: #000;
+    float: left;
 }
-#section01, #section02, #section03 {
+
+.subhead #about {float: left;}
+.subhead #cont {float: right;}
+
+#sec01, #sec02, #sec03 {
     background-color: white;
     display: block;
 }
 
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-td {
+/* #about_visible.list {
+    position:relative;
     padding: 3px;
     background-color: lightgrey;
     width:33.33%;
@@ -129,15 +127,6 @@ td {
     color: #000;
 
 }
-    
-th {
-    padding: 3px;
-    background-color: #ccbfc0; 
-    width:33.33%;
-    height: 20px;
-    text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 1em;
-    color: #000;
-}
+     */
+
 p { font-size: 1em;}

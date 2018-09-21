@@ -14,73 +14,53 @@
     <script>
         $(document).ready(function () {
 
-            $("#about_visible").hide();
             $(".sec").hide();
             $("#exp_visible").hide();
             $("#con_visible").hide();
 
 
 
-            $("#about").mouseenter(function () {
-                $("#about_visible").addClass("#listcss")
-                $("#about_visible").slidedown(1500);
-                $(".sec").hide();
+            $("#about").click(function () {
+                $(".sec").show();
                 $("#exp_visible").hide();
                 $("#con_visible").hide();
 
             });
 
             $("#exp").click(function () {
-                $("#about_visible").hide();
-                $("#exp_visible").slideToggle();
+                $(".sec").hide();
+                $("#exp_visible").slideToggle(2000);
                 $("#con_visible").hide();
 
             });
 
             $("#cont").click(function () {
-                $("#about_visible").hide();
-                $("#con_visible").hide();
-                $("#exp_visible").slideToggle();
-            });
+                $(".sec").hide();
+                $("#exp_visible").hide();
+                $("#con_visible").slideToggle(2000);
 
-             $("#th1").mouseenter(function () {
-                $("#sec01").slidedown(2000);
-                $("sec01").css("background-color", "#ffe4e1")
-                $("#sec02").hide();
-                $("#sec03").hide();
             });
-
-             $("#th2").mouseenter(function () {
-                $("#sec01").
-                $("#sec02").animate({height: 'toggle'});
-                $("#sec03").hide();
-            });
-
-        });
+            
+                    });
     </script>
 
     <style>
         #listcss {width: 100%; padding: 2px; margin: 0;}
-		.picture{width:100%; height:200px;}
 		
 	</style>
-
-
-
 </head>
 
 
 <body>
-
     <header>
         <ul>
             <li><a href="#home">Home</a></li>
             <li class="dropdown">
                 <a href="#about" class="dropbtn">About Me</a>
                 <div class="dropdown-content">
-                    <a href="#section01">Interests</a>
-                    <a href="#section02">Education</a>
-                    <a href="#section03">Philosophy</a>
+                    <a href="#sec01">Interests</a>
+                    <a href="#sec02">Education</a>
+                    <a href="#sec03">Philosophy</a>
                 </div>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#contact">Contact</a></li>
@@ -97,39 +77,29 @@
 
     </div>
 
-
-    <div>
-        <table>
-            <tr>
-                <td id="about">About</td>
-                <td id="exp">Experience</td>
-                <td id="cont">Contact</td>
-            </tr>
-        </table>
+    <div class="subhead">
+        <div id="about">About</div>
+        <div id="exp">Experience</div>
+        <div id="cont">Contact</div>
     </div>
 
+    <section id="about">
+        <div class="sec">
+            <p id="sec01"><span>Education</span><br>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi nostrum ullam
+                perferendis magnam laudantium id neque adipisci tempora officia provident repellat dicta, eos
+                illo placeat quaerat nulla dolor assumenda libero?</p>
 
-    <table id="about_visible">
-        <tr id="list">
-            <th id="th1">Education</th>
-            <th id="th2">Interests</th>
-            <th id="th3">Philosophy</th>
-        </tr>
-    </table>
+            <p id="sec02"><span>Interests</span><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam facilis
+                nostrum, sunt, exercitationem laboriosam tempore quasi aliquam quia in ipsam consectetur.
+                Tempore aliquam culpa natus, dignissimos libero nulla labore sint.</p>
 
-    <section class="sec">
-        <p id="sec01">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi nostrum ullam
-            perferendis magnam laudantium id neque adipisci tempora officia provident repellat dicta, eos
-            illo placeat quaerat nulla dolor assumenda libero?</p>
 
-        <p id="sec02">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam facilis
-            nostrum, sunt, exercitationem laboriosam tempore quasi aliquam quia in ipsam consectetur.
-            Tempore aliquam culpa natus, dignissimos libero nulla labore sint.</p>
-        </li>
-
-        <p id="sec03">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias suscipit dolorem
-            distinctio! Autem beatae sapiente quidem consectetur eos magnam, optio sequi culpa, a sit nam
-            cupiditate aliquam explicabo placeat cum.</p>
+            <p id="sec03"><span>Philosophy</span><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias suscipit dolorem
+                distinctio! Autem beatae sapiente quidem consectetur eos magnam, optio sequi culpa, a sit nam
+                cupiditate aliquam explicabo placeat cum.</p>
     </section>
 
     <section id="experience">
