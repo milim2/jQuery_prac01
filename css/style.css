@@ -130,3 +130,14 @@ td {
 
 }
     
+th {
+    padding: 3px;
+    background-color: #ccbfc0; 
+    width:33.33%;
+    height: 20px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1em;
+    color: #000;
+}
+p { font-size: 1em;}

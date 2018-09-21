@@ -14,26 +14,56 @@
     <script>
         $(document).ready(function () {
 
-            $("#visible").hide();           
+            $("#about_visible").hide();
+            $(".sec").hide();
             $("#exp_visible").hide();
             $("#con_visible").hide();
 
 
-            $("#about").click(function() {
-                $("#visible").slideDown();
-            });
-            
-            $("#exp").click(function() {
-                $("#visible").hide();
-                $("#exp_visible").slideDown();
-                
+
+            $("#about").mouseenter(function () {
+                $("#about_visible").addClass("#listcss")
+                $("#about_visible").slidedown(1500);
+                $(".sec").hide();
+                $("#exp_visible").hide();
+                $("#con_visible").hide();
+
             });
 
+            $("#exp").click(function () {
+                $("#about_visible").hide();
+                $("#exp_visible").slideToggle();
+                $("#con_visible").hide();
+
+            });
+
+            $("#cont").click(function () {
+                $("#about_visible").hide();
+                $("#con_visible").hide();
+                $("#exp_visible").slideToggle();
+            });
+
+             $("#th1").mouseenter(function () {
+                $("#sec01").slidedown(2000);
+                $("sec01").css("background-color", "#ffe4e1")
+                $("#sec02").hide();
+                $("#sec03").hide();
+            });
+
+             $("#th2").mouseenter(function () {
+                $("#sec01").
+                $("#sec02").animate({height: 'toggle'});
+                $("#sec03").hide();
+            });
 
         });
-
-
     </script>
+
+    <style>
+        #listcss {width: 100%; padding: 2px; margin: 0;}
+		.picture{width:100%; height:200px;}
+		
+	</style>
 
 
 
@@ -64,52 +94,61 @@
         <h1>Milim Lee</h1>
         <p>I'm a student in computer programming course at Sheridan college.</p>
         <p>To become a geek in programming, I am working on and on...<br>
-           
+
     </div>
-       
 
-        <div> 
+
+    <div>
         <table>
-	    <tr><td id="about">About</td>
-		<td id="exp">Experience</td>
-		<td id="cont">Contact</td></tr>
-</table>
-</div>
+            <tr>
+                <td id="about">About</td>
+                <td id="exp">Experience</td>
+                <td id="cont">Contact</td>
+            </tr>
+        </table>
+    </div>
 
-<section id="visible">           
-                <ul>
-                    <li id="section01">Education
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi nostrum ullam
-                        perferendis magnam laudantium id neque adipisci tempora officia provident repellat dicta, eos
-                        illo placeat quaerat nulla dolor assumenda libero?</p></li>
-                    <li id="section02">Interests
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam facilis
-                        nostrum, sunt, exercitationem laboriosam tempore quasi aliquam quia in ipsam consectetur.
-                        Tempore aliquam culpa natus, dignissimos libero nulla labore sint.</p></li>
-                    <li id="section03">Philosophy
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias suscipit dolorem
-                        distinctio! Autem beatae sapiente quidem consectetur eos magnam, optio sequi culpa, a sit nam
-                        cupiditate aliquam explicabo placeat cum.</p></li>
-                                        </ul>               
-        </section>
 
-        <section id="experience">
-               <div id="exp_visible">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus ipsam necessitatibus nam voluptatem
-                vitae accusamus vero nesciunt quis ullam? Rem.
-                </div>
-        </section>
+    <table id="about_visible">
+        <tr id="list">
+            <th id="th1">Education</th>
+            <th id="th2">Interests</th>
+            <th id="th3">Philosophy</th>
+        </tr>
+    </table>
 
-        <section id="contact">              
-            <div id="con_visible">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus ipsam necessitatibus nam voluptatem
-                vitae accusamus vero nesciunt quis ullam? Rem.
-            </div>
-        </section>
-  
+    <section class="sec">
+        <p id="sec01">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi nostrum ullam
+            perferendis magnam laudantium id neque adipisci tempora officia provident repellat dicta, eos
+            illo placeat quaerat nulla dolor assumenda libero?</p>
+
+        <p id="sec02">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam facilis
+            nostrum, sunt, exercitationem laboriosam tempore quasi aliquam quia in ipsam consectetur.
+            Tempore aliquam culpa natus, dignissimos libero nulla labore sint.</p>
+        </li>
+
+        <p id="sec03">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias suscipit dolorem
+            distinctio! Autem beatae sapiente quidem consectetur eos magnam, optio sequi culpa, a sit nam
+            cupiditate aliquam explicabo placeat cum.</p>
+    </section>
+
+    <section id="experience">
+        <div id="exp_visible">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus ipsam necessitatibus nam voluptatem
+            vitae accusamus vero nesciunt quis ullam? Rem.
+        </div>
+    </section>
+
+    <section id="contact">
+        <div id="con_visible">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus ipsam necessitatibus nam voluptatem
+            vitae accusamus vero nesciunt quis ullam? Rem.
+        </div>
+    </section>
+
     <footer>
-    <hr>
-    <p>CopyRight</p>
+        <hr>
+        <p>CopyRight</p>
     </footer>
 
 
