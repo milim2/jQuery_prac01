@@ -18,18 +18,17 @@
             $("#section02").hide();
             $("#section03").hide();
 
-            $("column").mouseleave(function () {
-                $("h1").animate({
+            $("h1").mouseenter(function () {
+                $("h2").animate({
                     fontSize: "3.5em"
                 });
             });    
 
-            $("column1").mouseenter(function () {
+            $("h1").mouseleave(function () {
                 $("h2").animate({
-                    fontSize: "2em"
+                    fontSize: "1.5em"
                 });
             });
-
 
             $("#About").click(function () {
                 $("#section01").show(2000);
@@ -155,7 +154,7 @@
 
     <nav>
         <div class="column">
-            <img src="./images/portrait_small.jpg" alt="Avatar" class="avatar">
+            <img src="./images/portrait_small.jpg" alt="Avatar" class="avatar" id="pic">
         </div>
         <div class="column1">
             <p><h1>Milim Lee</h1>

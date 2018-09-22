@@ -95,6 +95,7 @@ li.dropdown {
 
 .nav-header #About {
     flex: 1;
+    text-align: center;
 }
 
 .nav-header #exp {
