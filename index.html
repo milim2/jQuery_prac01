@@ -14,117 +14,224 @@
     <script>
         $(document).ready(function () {
 
-            $(".sec").hide();
-            $("#exp_visible").hide();
-            $("#con_visible").hide();
+            $("#section01").hide();
+            $("#section02").hide();
+            $("#section03").hide();
+
+            $("column").mouseleave(function () {
+                $("h1").animate({
+                    fontSize: "3.5em"
+                });
+            });    
+
+            $("column1").mouseenter(function () {
+                $("h2").animate({
+                    fontSize: "2em"
+                });
+            });
 
 
+            $("#About").click(function () {
+                $("#section01").show(2000);
+                $("#about_visible").cssClass("p span");
+                $("#int_viisible").cssClass("p span");
+                $("#phy_visible").cssClass("p span");
+                $("#section02").hide();
+                $("#section03").hide();
+            });
 
-            $("#about").click(function () {
-                $(".sec").show();
+            $("#edu_fold").click(function () {
+                $("#edu_visible").fadeOut(1000);
                 $("#exp_visible").hide();
                 $("#con_visible").hide();
+            });
 
+            $("#int_fold").click(function () {
+                $("#int_visible").fadeOut(1000);
+                $("#exp_visible").hide();
+                $("#con_visible").hide();
+            });
+
+            $("#phy_fold").mouseup(function () {
+                $("#phy_visible").slideUp(2000);
+                $("#exp_visible").hide();
+                $("#con_visible").hide();
             });
 
             $("#exp").click(function () {
-                $(".sec").hide();
-                $("#exp_visible").slideToggle(2000);
-                $("#con_visible").hide();
-
+                $("#section01").hide(500);
+                $("#section02").fadeIn(2000);
+                $("#section03").hide();
             });
 
             $("#cont").click(function () {
-                $(".sec").hide();
-                $("#exp_visible").hide();
-                $("#con_visible").slideToggle(2000);
-
+                $("#section01").hide();
+                $("#section02").hide();
+                $("#section03").slideDown(2000);
+                $("#section03").css("padding", "20px");
+                $("#section03").css("font-size", "1.2em");
+                $("#section03").css("text-align", "center");
             });
-            
-                    });
+
+            $(".dropbtn").click(function () {
+                $("#section01").fadeIn(1000);
+                $("#section02").hide();
+                $("#section03").hide();
+            });
+
+            $("#m_edu").hover(function () {
+                $("#section01").show();
+                $("#edu_visible").fadeIn(500);
+                $("#int_visible").hide();
+                $("#phy_visible").hide();
+                $("#section02").hide();
+                $("#section03").hide();
+            });
+
+            $("#m_int").mousedown(function () {
+                $("#section01").show();
+                $("#edu_visible").hide();
+                $("#int_visible").fadeIn(2000);
+                $("#phy_visible").hide();
+                $("#section02").hide();
+                $("#section03").hide();
+            });
+
+            $("#m_phy").click(function () {
+                $("#section01").show();
+                $("#edu_visible").hide();
+                $("#int_visible").hide();
+                $("#phy_visible").fadeToggle(2000);
+                $("#section02").hide();
+                $("#section03").hide();
+            });
+
+            $(".m_experience").click(function () {
+                $("#section01").hide();
+                $("#section02").slideToggle(2000);
+                $("#section03").hide();
+            });
+
+            $(".m_contact").click(function () {
+                $("#section01").hide();
+                $("#section02").hide();
+                $("#section03").show();
+                $("#cont_visible").animate({
+                    fontSize: "24px"
+                }, 1000);
+            });
+
+        });
     </script>
 
     <style>
-        #listcss {width: 100%; padding: 2px; margin: 0;}
-		
-	</style>
+        p span {
+            display: block;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-left: 6px solid red;
+            background-color: lightgrey;
+            padding: 2px;
+        }
+    </style>
 </head>
 
 
 <body>
     <header>
         <ul>
-            <li><a href="#home">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li class="dropdown">
                 <a href="#about" class="dropbtn">About Me</a>
                 <div class="dropdown-content">
-                    <a href="#sec01">Interests</a>
-                    <a href="#sec02">Education</a>
-                    <a href="#sec03">Philosophy</a>
+                    <a href="#edu_visible" id="m_edu">Education</a>
+                    <a href="#int_visible" id="m_int">Interests</a>
+                    <a href="#phy_visible" id="m_phy">Philosophy</a>
                 </div>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li class="m_experience"><a href="#section02">Experience</a></li>
+            <li class="m_contact"><a href="#section03">Contact</a></li>
         </ul>
     </header>
 
-    <div class="column">
-        <img src="./images/portrait_small.jpg" alt="Avatar" class="avatar">
-    </div>
-    <div class="column1">
-        <h1>Milim Lee</h1>
-        <p>I'm a student in computer programming course at Sheridan college.</p>
-        <p>To become a geek in programming, I am working on and on...<br>
+    <nav>
+        <div class="column">
+            <img src="./images/portrait_small.jpg" alt="Avatar" class="avatar">
+        </div>
+        <div class="column1">
+            <p><h1>Milim Lee</h1>
+            <h2>I'm a student in computer programming course at Sheridan college.</h2>
+            
+            <h2>To become a geek in programming, I am working on and on...<br></h2></p>
+        </div>
 
-    </div>
+        <div class="nav-header">
+            <div id="About">About</div>
+            <div id="exp">Experience</div>
+            <div id="cont">Contact</div>
+        </div>
+    </nav>
 
-    <div class="subhead">
-        <div id="about">About</div>
-        <div id="exp">Experience</div>
-        <div id="cont">Contact</div>
-    </div>
+    <section id="section01">
+        <div id="about_viisible">
 
-    <section id="about">
-        <div class="sec">
-            <p id="sec01"><span>Education</span><br>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi nostrum ullam
-                perferendis magnam laudantium id neque adipisci tempora officia provident repellat dicta, eos
-                illo placeat quaerat nulla dolor assumenda libero?</p>
+            <p id="edu_fold"><span>Education</span></p>
+            <div id="edu_visible">
+                <p>Currently taking in the 2-year Diploma Computer Programming course at Sheridan college </p>
+                <p>Passionate about Web developing and knowledge about a variety of programming languages:
+                    JavaScript, jQuery, Java, HTML/CSS3, SQL</p>
+                <p>Familiar with using variable tools : Virtual Machine, Visual Studio Code, Eclipse, etc.</p>
+            </div>
 
-            <p id="sec02"><span>Interests</span><br>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam facilis
-                nostrum, sunt, exercitationem laboriosam tempore quasi aliquam quia in ipsam consectetur.
-                Tempore aliquam culpa natus, dignissimos libero nulla labore sint.</p>
+            <p id="int_fold"><span>Interests & Skills</span></p>
+            <div id="int_visible">
+                <p>Skills</p>
+                Excellent in problem solving and enjoy learning new skills <br>
+                Cooperated with team members in a punctual and responsible approach<br>
+                <p>Interests</p>
+                <p>Loving problems solving, I enjoy playing puzzle games by Nintendo or sudoku, and watching
+                    detective mysteries. These can help me to develop various of ideas. I love to travel and drive. My
+                    friends often called me as a walking map because I remember the ways which I have been just one
+                    time. Finding the effective way to reach to a destination is a big pleasure to me. In case of
+                    sports, I enjoyed doing many knids of sports, but currently, taking a walk is the best exercise for
+                    me. Still watching sports is the favorite activity to me.</p>
+            </div>
 
-
-            <p id="sec03"><span>Philosophy</span><br>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias suscipit dolorem
-                distinctio! Autem beatae sapiente quidem consectetur eos magnam, optio sequi culpa, a sit nam
-                cupiditate aliquam explicabo placeat cum.</p>
+            <p id="phy_fold"><span>Inspiration</span></p>
+            <div id="phy_visible">
+                <p>Ji-young Gong, who wrote many of the best sellers in South Korea, was an inspiration to me a lot.
+                    By creating a social sensation to male dominating society, she has been supported by countless
+                    women. Once she gave up her writing for seven years because of the social culture which are to
+                    sensitive to others’ reaction and criticism. However, after resuming her writing again, she is
+                    quickly making her way up to her best days once again. Based on the very basic code of conduct,
+                    honesty, she finally overcame her despair. And she found the sincere value of love and earnestness.
+                    To a small woman, myself, who sincerely want to be a developer, she has been a great inspiration to
+                    my way of life.</p>
+            </div>
+        </div>
     </section>
 
-    <section id="experience">
+    <section id="section02">
         <div id="exp_visible">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus ipsam necessitatibus nam voluptatem
-            vitae accusamus vero nesciunt quis ullam? Rem.
+            <p>Post Office Clerk <br>NOV 2016 - DEC 2017<br>
+                Shoppers, Mississauga</p>
+            <p>Provided technical assistance of Office system to co-workers; cooperated with team members – punctual
+                and responsible attitude</p>
+            <p>Contributed sales for the responsible team with being well-informed of daily bullet</p>
+            <p>Demonstrated flexibility, enthusiasm and superb work ethics in taking on special sales</p>
+            <p></p>
+            <p>Based on my past and present working experience, I have developed team work skill and have a strong
+                sense of responsibility. I am confident of my future after graduate the school, because I have been
+                highly regarded by companies and co-workers since I worked as an employee.</p>
         </div>
     </section>
 
-    <section id="contact">
+    <section id="section03">
         <div id="con_visible">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus ipsam necessitatibus nam voluptatem
-            vitae accusamus vero nesciunt quis ullam? Rem.
+            <p>Git : https://milim2.github.io/modern_portfolio/</p>
+            <p>LinkedIn : www.linkedin.com/in/milimlee0</p>
+            <p>Phone: 647-519-7358</p>
         </div>
     </section>
-
-    <footer>
-        <hr>
-        <p>CopyRight</p>
-    </footer>
-
-
-    <script type="text/javascript" src="js/column.js"></script>
-    <!-- <script type="text/javascript" src="js/anime.js"></script>
-    <script type="text/javascript" src="js/anime.min.js"></script> -->
 
 </body>
 
